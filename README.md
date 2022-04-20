@@ -13,9 +13,6 @@
     <li>
       <a href="#deploy-usage">Deploy and Usage</a>
     </li>
-    <li>
-      <a href="#structure">Structure</a>
-    </li>
     <li><a href="#codereview">Code Review</a></li>
   </ol>
 </details>
@@ -52,29 +49,6 @@ To use the contract you can do any of the following:
 |readNews|Function|public - view function|This function is used to read all news on the contract.|`near view $CONTRACT readNews`|
 |deleteNews|Function|public - call function|This function is used to delete a specific news by using its is. Only the account published the news can delete it.|`near call $CONTRACT deleteNews '{"id" : <News-Id>}' --accountId <Your-Account-Name>`|
 |sendGratitude|Function|public - call function|This function is used to donate the Newsman by using it account name.|`near call $CONTRACT sendGratitude '{"Newsman" : "<Newsman-Account-Name"}' --amount <Donation-Amount> --accountId <Your-Account_name>`|
-
-### Structure
-
-You can see the folder structure here:
-
-.NearPaper-New_Name_of_the_Newspaper
-├── script               
-│   ├── 1.dev-deploy.sh         
-│   ├── 2.readNews.sh      
-│   └── 3.cleanup.sh    
-└── src                
-    ├── simple          
-    ├   ├── assembly
-    ├        ├── index.ts
-    ├        ├── model.ts
-    └────── asconfig.json
-├── as-types.d.ts
-├── tsconfig.json
-├── utils.ts             
-├── as-pect.config.js 
-├── LICENSE
-├── package.json  
-└── README.md
 
 
 ### CodeReview

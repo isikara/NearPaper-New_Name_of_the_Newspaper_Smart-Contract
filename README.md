@@ -49,7 +49,7 @@ To use the contract you can do any of the following:
 |bringNews|Function|public - view function|This function is used to get a specific news by using its id.|`near view $CONTRACT bringNews '{"id" : <News-Id>}' --accountId <Your-Account-Name>`|
 |readNews|Function|public - view function|This function is used to read all news on the contract.|`near view $CONTRACT readNews`|
 |deleteNews|Function|public - call function|This function is used to delete a specific news by using its is. Only the account published the news can delete it.|`near call $CONTRACT deleteNews '{"id" : <News-Id>}' --accountId <Your-Account-Name>`|
-|sendGratitude|Function|public - call function|This function is used to donate the Newsman by using it account name.|`near call $CONTRACT sendGratitude '{"newsman" : "<Newsman-Account-Name"}' --amount <Donation-Amount> --accountId <Your-Account_name>`|
+|sendGratitude|Function|public - call function|This function is used to donate the Newsman by using it account name.|`near call $CONTRACT sendGratitude '{"newsman" : "<Newsman-Account-Name>"}' --amount <Donation-Amount> --accountId <Your-Account_Name>`|
 
 
 ### CodeReview

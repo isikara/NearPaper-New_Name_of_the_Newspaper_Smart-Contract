@@ -130,7 +130,7 @@ export function deleteNews(id: u32): void {
   //Donate the Newsman
 export function sendGratitude(newsman: AccountId): void {
   assert(context.accountBalance > context.attachedDeposit, "Your balance is not enough!");
-  logging.log(`Comolokko! ${context.attachedDeposit.toString()} NEAR sent`);
+  logging.log(`Comolokko! ${context.attachedDeposit.toString()} yoktoNEAR sent`);
   ContractPromiseBatch.create(newsman).transfer(context.attachedDeposit);
 }
 ```

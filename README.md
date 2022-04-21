@@ -32,11 +32,12 @@ To deploy the contract for development, follow these steps:
 1. clone this repo locally (`git clone https://github.com/isikara/NearPaper-New_Name_of_the_Newspaper_Smart-Contract.git`)
 2. run `yarn` to install dependencies (`yarn`)
 3. run `yarn build:release` to build your wasm file (`yarn build:release`)
-3. run `./build/release/simple.wasm` to deploy the contract (`near dev-deploy ./build/release/simple.wasm`)
-4. export `CONTRACT` to the deployed contract name (`export CONTRACT=<Contract-Name>`)
-5. check `CONTRACT` veriable (`echo $CONTRACT`)
-6. export `OWNER` (`export OWNER=<Your-Account-Name>`)
-7. check `OWNER` (`echo $OWNER`)
+4. login to your Near Account (`near login`)
+5. run `./build/release/simple.wasm` to deploy the contract (`near dev-deploy ./build/release/simple.wasm`)
+6. export `CONTRACT` to the deployed contract name (`export CONTRACT=<Contract-Name>`)
+7. check `CONTRACT` veriable (`echo $CONTRACT`)
+8. export `OWNER` (`export OWNER=<Your-Account-Name>`)
+9. check `OWNER` (`echo $OWNER`)
 
 To use the contract you can do any of the following:
 

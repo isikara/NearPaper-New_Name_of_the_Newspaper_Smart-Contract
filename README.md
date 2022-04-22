@@ -1,6 +1,9 @@
 <div align="center">
     <h3 align="center">NearPaper - Next Generation Newspaper Project</h3>
 </div>
+
+![](images/near-logo.png)
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -13,13 +16,16 @@
     <li>
       <a href="#deploy-usage">Deploy and Usage</a>
     </li>
+    <li>
+      <a href="#structure">Structure</a>
+    </li>
     <li><a href="#codereview">Code Review</a></li>
   </ol>
 </details>
 
 ### Intro
 
-Next generation technologies continue to change the definition of many professions. Journalism is absolutely one of them and The NearPaper project is here to rewrite the codes of journalism. The main idea of the NearPaper project is to provide a fully decentralized and independent journalism infrastructure to the ecosystem. NearPaper users call themself pro-consumers that they can read and publish news without limitation of any central authority. 
+Next generation technologies continue to change the definition of many professions. Journalism is absolutely one of them and The NearPaper project is here to rewrite the codes of journalism. The main idea of the NearPaper project is to provide a fully decentralized and independent journalism infrastructure to the ecosystem. NearPaper users call themself pro-consumers that they can read and publish news without limitation of any central authority.
 
 ### Infrastructure
 
@@ -32,12 +38,11 @@ To deploy the contract for development, follow these steps:
 1. clone this repo locally (`git clone https://github.com/isikara/NearPaper-New_Name_of_the_Newspaper_Smart-Contract.git`)
 2. run `yarn` to install dependencies (`yarn`)
 3. run `yarn build:release` to build your wasm file (`yarn build:release`)
-4. login to your Near Account (`near login`)
-5. run `./build/release/simple.wasm` to deploy the contract (`near dev-deploy ./build/release/simple.wasm`)
-6. export `CONTRACT` to the deployed contract name (`export CONTRACT=<Contract-Name>`)
-7. check `CONTRACT` veriable (`echo $CONTRACT`)
-8. export `OWNER` (`export OWNER=<Your-Account-Name>`)
-9. check `OWNER` (`echo $OWNER`)
+3. run `./build/release/simple.wasm` to deploy the contract (`near dev-deploy ./build/release/simple.wasm`)
+4. export `CONTRACT` to the deployed contract name (`export CONTRACT=<Contract-Name>`)
+5. check `CONTRACT` veriable (`echo $CONTRACT`)
+6. export `OWNER` (`export OWNER=<Your-Account-Name>`)
+7. check `OWNER` (`echo $OWNER`)
 
 To use the contract you can do any of the following:
 
@@ -45,11 +50,34 @@ To use the contract you can do any of the following:
 |---|---|---|---|---|
 |allNews|PersistentUnorderedMap|public|This class is used to store all news with their id's.|-|
 |News|Class|public|This class is state news with its id, newsman and publish date.|-|
-|publishNews|Function|public - call function|This function is used to publish a news.|`near call $CONTRACT publishNews '{"text" : "<Your-News>"}' --accountId <Your-Account-Name>`|
-|bringNews|Function|public - view function|This function is used to get a specific news by using its id.|`near view $CONTRACT bringNews '{"id" : <News-Id>}' --accountId <Your-Account-Name>`|
+|publishNews|Function|public - call function|This function is used to publish a news.|`near call $CONTRACT publishNews '{"text" : "<Your-News>"}' --accountId <Your-Account-Name`|
+|bringNews|Function|public - view function|This function is used to get a specific news by using its id.|`near view $CONTRACT bringNews '{"id" : <News-Id>}' --accountId <Your-Account-Name`|
 |readNews|Function|public - view function|This function is used to read all news on the contract.|`near view $CONTRACT readNews`|
 |deleteNews|Function|public - call function|This function is used to delete a specific news by using its is. Only the account published the news can delete it.|`near call $CONTRACT deleteNews '{"id" : <News-Id>}' --accountId <Your-Account-Name>`|
-|sendGratitude|Function|public - call function|This function is used to donate the Newsman by using it account name.|`near call $CONTRACT sendGratitude '{"newsman" : "<Newsman-Account-Name>"}' --amount <Donation-Amount> --accountId <Your-Account_Name>`|
+|sendGratitude|Function|public - call function|This function is used to donate the Newsman by using it account name.|`near call $CONTRACT sendGratitude '{"Newsman" : "<Newsman-Account-Name"}' --amount <Donation-Amount> --accountId <Your-Account_name>`|
+
+### Structure
+
+You can see the folder structure here:
+
+.NearPaper-New_Name_of_the_Newspaper
+├── script               
+│   ├── 1.dev-deploy.sh         
+│   ├── 2.readNews.sh      
+│   └── 3.cleanup.sh    
+└── src                
+    ├── simple          
+    ├   ├── assembly
+    ├        ├── index.ts
+    ├        ├── model.ts
+    └────── asconfig.json
+├── as-types.d.ts
+├── tsconfig.json
+├── utils.ts             
+├── as-pect.config.js
+├── LICENSE
+├── package.json  
+└── README.md
 
 
 ### CodeReview

@@ -1,6 +1,22 @@
-import { context, ContractPromiseBatch, logging, u128 } from "near-sdk-as";
+import { 
+  context,  // visibility into account, contract and blockchain details
+  ContractPromiseBatch,  // make asynchronous calls to other contracts and receive callbacks
+  logging,  // append to the execution environment log (appears in JS Developer Console when using near-api-js)
+  storage, // append to the execution environment log (appears in JS Developer Console when using near-api-js)
+} from "near-sdk-as";
+
 import { AccountId } from "../../utils";
 import { News, allNews } from "./model";
+
+  //Health Check
+export function healthCheck(req: string, rep: string): string {
+  storage.setString(req,rep);
+  let result = storage.getString(req);
+  if(result) {
+    return "Going great 🦾✅";
+  }
+  return "Heart rate of the function is abnormal 🦠🚫"
+}
 
   //Create and Publish a News
 export function publishNews(text: string): News {

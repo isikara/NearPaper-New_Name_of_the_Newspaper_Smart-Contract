@@ -1,6 +1,11 @@
-import {context, PersistentUnorderedMap, math, logging } from "near-sdk-as";
+import {
+    context,  // visibility into account, contract and blockchain details
+    PersistentUnorderedMap,  // data structure that wraps storage
+    math,   // utility math function for hashing using SHA and Keccak as well as pseudo-random data
+    logging,
+} from "near-sdk-as";
 
-export const allNews = new PersistentUnorderedMap<u32, News>("allNews");  
+export const allNews = new PersistentUnorderedMap<u32, News>("allNews"); 
 
 @nearBindgen
 export class News {
@@ -21,7 +26,7 @@ export class News {
     }
 
     static bringFromArchieve(id: u32): News {
-        assert(allNews.contains(id), "News could not found! Please, check ID of the news.")
+        assert(allNews.contains(id), "News could not found! Please, check ID of the news.");
         return allNews.getSome(id);
     }
 

@@ -47,7 +47,7 @@ To use the contract you can do any of the following:
 |---|---|---|---|---|
 |allNews|PersistentUnorderedMap|public|This class is used to store all news with their id's.|-|
 |News|Class|public|This class is state news with its id, newsman and publish date.|-|
-|healthCheck|Function|public - view function|This function is used to general check.|`near call $CONTRACT healthCheck '{"req" : "<Type-Request>","rep" : "<Type-Reply>"}' --accountId <Your-Account-Name>`|
+|healthCheck|Function|public - view function|This function is used for general check.|`near call $CONTRACT healthCheck '{"req" : "<Your-Key>","rep" : "<Your-Value>"}' --accountId <Your-Account-Name>`|
 |publishNews|Function|public - call function|This function is used to publish a news.|`near call $CONTRACT publishNews '{"text" : "<Your-News>"}' --accountId <Your-Account-Name>`|
 |bringNews|Function|public - view function|This function is used to get a specific news by using its id.|`near view $CONTRACT bringNews '{"id" : <News-Id>}'`|
 |readNews|Function|public - view function|This function is used to read all news on the contract.|`near view $CONTRACT readNews`|

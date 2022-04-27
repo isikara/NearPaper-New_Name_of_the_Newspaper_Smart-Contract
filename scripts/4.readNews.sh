@@ -4,8 +4,8 @@
 set -e
 
 [ -z "$CONTRACT" ] && echo "Missing \$CONTRACT environment variable"
-echo Please \export your account id to the \$CONTRACT variable!
-echo 'export CONTRACT=__new_contract_account_id__'
+[ -z "$CONTRACT" ] && echo Please \export your account id to the \$CONTRACT variable!
+[ -z "$CONTRACT" ] && echo 'export CONTRACT=__new_contract_account_id__'
 
 echo
 echo

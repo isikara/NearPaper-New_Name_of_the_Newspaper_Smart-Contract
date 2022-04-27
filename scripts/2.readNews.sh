@@ -3,6 +3,10 @@
 # exit on first error after this point to avoid redeploying with successful build
 set -e
 
+[ -z "$CONTRACT" ] && echo "Missing \$CONTRACT environment variable"
+echo Please \export your account id to the \$CONTRACT variable!
+echo 'export CONTRACT=__new_contract_account_id__'
+
 echo
 echo
 echo ---------------------------------------------------------

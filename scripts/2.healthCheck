@@ -19,4 +19,5 @@ echo
 echo "near call $CONTRACT healthCheck '{"req" : "<Your-Key>","rep" : "<Your-Value>"}' --accountId $YOUR_ACC"
 echo 
 
+echo
 exit 0

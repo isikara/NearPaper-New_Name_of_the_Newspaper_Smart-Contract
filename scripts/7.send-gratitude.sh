@@ -24,7 +24,7 @@ echo ---------------------------------------------------------
 echo "Step 1: Call 'sendGratitude' functions on the contract"
 echo ---------------------------------------------------------
 echo "After all variables are exported, please use below function. 
-echo "near call $CONTRACT sendGratitude '{"newsman" : $DEST_ACC}' --amount $AMOUNT --accountId $MY_ACC"
+echo "near call $CONTRACT sendGratitude '{"'"newsman"'" : "'"$DEST_ACC"'"}' --amount $AMOUNT --accountId $MY_ACC"
 echo 
 echo
 exit 0

@@ -16,7 +16,7 @@ echo ---------------------------------------------------------
 echo "Step 1: Call 'bringNews' functions on the contract"
 echo ---------------------------------------------------------
 echo "After all variables are exported, please use below function."
-echo "near view $CONTRACT bringNews '{"id" : $ID}'"
+echo "near view $CONTRACT bringNews '{"'"id"'" : "'"$ID"'"}'"
 echo 
 echo
 exit 0

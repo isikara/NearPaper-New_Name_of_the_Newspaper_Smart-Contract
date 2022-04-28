@@ -20,7 +20,7 @@ echo ---------------------------------------------------------
 echo "Step 1: Call 'publishNews' functions on the contract"
 echo ---------------------------------------------------------
 echo "After all variables are exported, please use below function."
-echo "near call $CONTRACT publishNews '{"text" : $NEWS}' --accountId $MY_ACC"
+echo "near call $CONTRACT publishNews '{"text" : "$NEWS"}' --accountId $MY_ACC"
 echo 
 
 echo

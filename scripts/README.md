@@ -51,7 +51,7 @@ It uses the following setup:
   4.bring-news.sh         
   5.read-news.sh
   6.delete-news.sh
-  7-send-gratitude.sh
+  7.send-gratitude.sh
   ```
 
 ### Terminal **B**

@@ -29,11 +29,12 @@ It uses the following setup:
 *This window is used to compile, deploy and control the contract*
 - Environment
   ```sh
-  export CONTRACT=        # depends on deployment
-  export MY_ACC=           # any account you control
-  export ID=           # id of a specific news
+  export CONTRACT=       # depends on deployment
+  export MY_ACC=         # any account you control
+  export ID=             # id of a specific news
   export NEWS=           # news
-  
+  export AMOUNT=         # donation amount
+ 
   # for example
   # export CONTRACT=dev-1651118992529-51112783772875
   # export MY_ACC=alidev.testnet

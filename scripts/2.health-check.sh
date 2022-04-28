@@ -16,7 +16,7 @@ echo ---------------------------------------------------------
 echo "Step 1: Call 'healthCheck' functions on the contract"
 echo ---------------------------------------------------------
 echo "After all variables are exported, please use below function." 
-echo "near call $CONTRACT healthCheck '{"req" : "<Your-Key>","rep" : "<Your-Value>"}' --accountId $MY_ACC"
+echo "near call $CONTRACT healthCheck '{"req" : "ping","rep" : "pong"}' --accountId $MY_ACC"
 echo 
 echo
 exit 0
